@@ -6,6 +6,7 @@ import { AppRoutingModule } from "./app-routing.module";
 import { AppComponent } from "./app.component";
 import { LoginModule } from "./login/login.module";
 import { HeroModule } from "./hero/hero.module";
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 
 @NgModule({
   declarations: [
@@ -16,7 +17,8 @@ import { HeroModule } from "./hero/hero.module";
     AppRoutingModule,
     LoginModule,
     HttpClientModule,
-    HeroModule
+    HeroModule,
+    BrowserAnimationsModule
   ],
   providers: [],
   bootstrap: [AppComponent]
