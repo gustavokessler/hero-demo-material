@@ -1,9 +1,18 @@
-<label>Login: </label>
-<input placeholder="Login" [(ngModel)]="login">
-<br>
-<br>
-<label>Senha: </label>
-<input placeholder="Senha" type="password" [(ngModel)]="password">
-<br>
-<br>
-<button (click)="submit()">Login</button>
+<div fxLayout fxLayoutAlign="center center" fxFlexFill style="background: #eff2f5"> 
+    <mat-card fxFlex="30%">
+        <mat-card-header fxLayoutAlign="center center">
+            <mat-card-title>Login</mat-card-title>
+        </mat-card-header>
+
+        <mat-card-content fxLayout="column">
+            <mat-form-field>
+                <input matInput placeholder="login" [(ngModel)]="login">
+            </mat-form-field>
+            <mat-form-field>
+                <input matInput type="password" placeholder="senha" [(ngModel)]="password">
+            </mat-form-field>
+        </mat-card-content>
+
+        <button mat-raised-button color="primary" (click)="submit()">Entrar</button>
+    </mat-card>
+</div>
