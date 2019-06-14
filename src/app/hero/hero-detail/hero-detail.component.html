@@ -1,10 +1,37 @@
-<div *ngIf="hero">
-  <h2>{{hero.id + " " + hero.name | uppercase}} Detalhes</h2>
-  <div><span>força: </span>{{hero.forca}}</div>
-  <div><span>inteligência: </span>{{hero.inteligencia}}</div>
-  <div><span>agilidade: </span>{{hero.agilidade}}</div>
-  <div><span>destreza: </span>{{hero.destreza}}</div>
-  <br>
-  <br>
+<div fxLayout="row" fxLayoutAlign="center start" fxFlexFill style="background: #EEE">
+
+  <mat-card fxFlex="40">
+    <mat-card-header fxLayoutAlign="center center">
+      <mat-card-title style="text-align:  center">{{hero.id + " - " + hero.name | uppercase}}</mat-card-title>
+      <mat-card-subtitle style="text-align:  center">Detalhes</mat-card-subtitle>
+    </mat-card-header>
+    <mat-card-content>
+      <div *ngIf="hero">
+
+        <section class="example-section">
+          <label class="example-margin">Força:</label>
+          <mat-progress-bar mode="determinate" value="{{hero.forca}}"></mat-progress-bar>
+        </section>
+       
+        <section class="example-section">
+          <label class="example-margin">Inteligência:</label>
+          <mat-progress-bar mode="determinate" value="{{hero.inteligencia}}"></mat-progress-bar>
+        </section>
+       
+        <section class="example-section">
+          <label class="example-margin">Agilidade:</label>
+          <mat-progress-bar mode="determinate" value="{{hero.agilidade}}"></mat-progress-bar>
+        </section>
+       
+        <section class="example-section">
+          <label class="example-margin">Destreza:</label>
+          <mat-progress-bar mode="determinate" value="{{hero.destreza}}"></mat-progress-bar>
+        </section>
+       
+      </div>
+    </mat-card-content>
+    <mat-card-actions align="end">
+      <button mat-flat-button color="primary" routerLink="/heroes">Votlar</button>
+    </mat-card-actions>
+  </mat-card>
 </div>
-<button routerLink="/heroes">Votlar</button>

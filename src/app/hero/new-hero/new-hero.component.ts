@@ -9,6 +9,10 @@ import { HeroService } from "../hero.service";
 })
 export class NewHeroComponent implements OnInit {
 
+  max = 100;
+  min = 0;
+  step = 1;
+
   hero: Hero = {
     name: "",
     forca: 0,

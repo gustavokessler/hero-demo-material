@@ -1,24 +1,48 @@
-<div>
-  <label>Nome: </label>
-  <input placeholder="Nome" [(ngModel)]="hero.name">
+<div fxLayout="row" fxLayoutAlign="center start" fxFlexFill style="background: #EEE">
+
+  <mat-card fxFlex="40">
+    <mat-card-header fxLayoutAlign="center center">
+      <mat-card-title style="text-align:  center"> Novo Herói</mat-card-title>
+    </mat-card-header>
+    <mat-card-content>
+      <div *ngIf="hero">
+
+        <section class="example-section">
+          <mat-form-field>
+            <input matInput placeholder="Nome" [(ngModel)]="hero.name">
+          </mat-form-field>
+        </section>
+        
+        <section class="example-section">
+          <label class="example-margin">Força:</label>
+          <mat-slider style="width: 100%" max="100" [min]="0" step="1" color="primary" [(ngModel)]="hero.forca">
+          </mat-slider>
+        </section>
+
+        <section class="example-section">
+          <label class="example-margin">Inteligência:</label>
+          <mat-slider style="width: 100%" max="100" [min]="0" step="1" color="primary" [(ngModel)]="hero.inteligencia">
+          </mat-slider>
+        </section>
+
+        <section class="example-section">
+          <label class="example-margin">Agilidade:</label>
+          <mat-slider style="width: 100%" max="100" [min]="0" step="1" color="primary" [(ngModel)]="hero.agilidade">
+          </mat-slider>
+        </section>
+
+        <section class="example-section">
+          <label class="example-margin">Destreza:</label>
+          <mat-slider style="width: 100%" max="100" [min]="0" step="1" color="primary" [(ngModel)]="hero.destreza">
+          </mat-slider>
+        </section>
+
+
+      </div>
+    </mat-card-content>
+    <mat-card-actions align="end">
+      <button mat-flat-button routerLink="/heroes">Votlar</button>
+      <button mat-flat-button color="primary" (click)="submit()">Salvar</button>
+    </mat-card-actions>
+  </mat-card>
 </div>
-<div>
-  <label>Força: </label>
-  <input placeholder="Força" [(ngModel)]="hero.forca">
-</div>
-<div>
-  <label>Inteligência: </label>
-  <input placeholder="Inteligência" [(ngModel)]="hero.inteligencia">
-</div>
-<div>
-  <label>Agilidade: </label>
-  <input placeholder="Agilidade" [(ngModel)]="hero.agilidade">
-</div>
-<div>
-  <label>Destreza: </label>
-  <input placeholder="Destreza" [(ngModel)]="hero.destreza">
-</div>
-<button (click)="submit()">Salvar</button>
-<br>
-<br>
-<button routerLink="/heroes">Voltar</button>

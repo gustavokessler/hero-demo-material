@@ -29,34 +29,34 @@ const HEROES: Array<Hero> = [
   {
     id: 1,
     name: "Iron Man",
-    forca: 4,
-    inteligencia: 10,
-    agilidade: 4,
-    destreza: 8
+    forca: 40,
+    inteligencia: 100,
+    agilidade: 40,
+    destreza: 80
   },
   {
     id: 2,
     name: "Capt. América",
-    forca: 10,
-    inteligencia: 6,
-    agilidade: 4,
-    destreza: 9
+    forca: 100,
+    inteligencia: 60,
+    agilidade: 40,
+    destreza: 90
   },
   {
     id: 3,
     name: "One Punch-Man",
-    forca: 10,
-    inteligencia: 10,
-    agilidade: 10,
-    destreza: 8
+    forca: 100,
+    inteligencia: 100,
+    agilidade: 100,
+    destreza: 80
   },
   {
     id: 4,
     name: "Máquina de Combate",
-    forca: 7,
-    inteligencia: 4,
-    agilidade: 5,
-    destreza: 8
+    forca: 70,
+    inteligencia: 40,
+    agilidade: 50,
+    destreza: 80
   }
 
 
