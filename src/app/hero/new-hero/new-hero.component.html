@@ -12,29 +12,33 @@
             <input matInput placeholder="Nome" [(ngModel)]="hero.name">
           </mat-form-field>
         </section>
-        
+
         <section class="example-section">
           <label class="example-margin">Força:</label>
           <mat-slider style="width: 100%" max="100" [min]="0" step="1" color="primary" [(ngModel)]="hero.forca">
           </mat-slider>
+          <label class="example-margin">{{hero.forca}}</label>
         </section>
 
         <section class="example-section">
           <label class="example-margin">Inteligência:</label>
           <mat-slider style="width: 100%" max="100" [min]="0" step="1" color="primary" [(ngModel)]="hero.inteligencia">
           </mat-slider>
+          <label class="example-margin">{{hero.inteligencia}}</label>
         </section>
 
         <section class="example-section">
           <label class="example-margin">Agilidade:</label>
           <mat-slider style="width: 100%" max="100" [min]="0" step="1" color="primary" [(ngModel)]="hero.agilidade">
           </mat-slider>
+          <label class="example-margin">{{hero.agilidade}}</label>
         </section>
 
         <section class="example-section">
           <label class="example-margin">Destreza:</label>
           <mat-slider style="width: 100%" max="100" [min]="0" step="1" color="primary" [(ngModel)]="hero.destreza">
           </mat-slider>
+          <label class="example-margin">{{hero.destreza}}</label>
         </section>
 
 
